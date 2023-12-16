@@ -927,6 +927,17 @@ section {
   fill: #11dbcf;
 }
 
+#contSkills > div >div{
+  width: 95%;
+  transition: .3s all ease-in-out;
+  /* color: #0563bb; */
+}
+#contSkills > div >div:hover{
+  box-shadow: 1px 1px 5px rgba(0,0,0,.15);
+}
+#contSkills > div > div svg{
+  font-size: 50px;
+}
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
