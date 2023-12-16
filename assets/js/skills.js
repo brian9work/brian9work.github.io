@@ -75,13 +75,13 @@ const obj = [
 style="font-size: 70px;"
 obj.map(o =>{
     document.getElementById("contSkills").innerHTML+=`
-    <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+    <div class="col-md-2 col-sm-3 col-4 d-flex flex-column justify-content-center align-items-center">
        <div class="d-flex flex-column justify-content-center align-items-center rounded-3 pt-4">
         <div class="icon">
           ${o.element}
         </div>
         <div class="mt-2">
-           <p class="fs-6">${o.type.toLocaleUpperCase()}</p>
+           <p class="fs-6 text-center">${o.type.toLocaleUpperCase()}</p>
         </div>
        </div>
     </div>
