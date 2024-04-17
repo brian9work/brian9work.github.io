@@ -9,27 +9,36 @@
 </head>
 <body>
    <div class="container mt-5 shadow-sm p-4 rounded-1">
-      <h3>Metodo de sincrona</h3>
+      <h3>Cifrado simétrico</h3>
       <form class="mt-4">
          <div class="mb-3">
             <label for="mensaje" class="form-label">Mensaje</label>
-            <input type="text" class="form-control" id="mensaje" value="">
+            <input type="text" class="form-control" id="mensaje" required minlength="1">
          </div>
          <div class="mb-3">
             <label for="llave" class="form-label">Llave</label>
-            <input type="text" class="form-control" id="llave" value="">
+            <input type="text" class="form-control" id="llave" required minlength="1">
          </div>
          <div class="row mt-5 justify-content-center gap-5">
-            <button type="submit" class="btn btn-primary py-3 rounded-3 col-5" id="encriptar">Encriptar</button>
-            <button type="submit" class="btn btn-success py-3 rounded-3 col-5" id="desencriptar">Desencriptar</button>
+            <button type="submit" 
+               class="btn btn-primary py-3 rounded-3 col-5" 
+               id="encriptar">Encriptar</button>
+            <button type="submit" 
+               class="btn btn-success py-3 rounded-3 col-5" 
+               id="desencriptar">Desencriptar</button>
          </div>
          <div class="my-5">
             <div class=" g-3 align-items-center">
                <div>
-                  <label for="mensaje" class="col-form-label">Mensaje encriptado</label>
+                  <label for="mensaje" 
+                     class="col-form-label">Resultado</label>
                </div>
                <div>
-                  <textarea class="form-control" name="" id="respuesta" rows="9"></textarea>
+                  <textarea 
+                     class="form-control" 
+                     id="respuesta" 
+                     rows="9"
+                  ></textarea>
                </div>
             </div>
             <br/>
