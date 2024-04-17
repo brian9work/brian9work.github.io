@@ -10,7 +10,12 @@ const avanzarCaracteres = (key)=>{
         // Posteriormente sumaremos todos los valores usando la funcion reduce y le agregaremos uno en caso de que la posicion del caracter sea 0
     ).reduce((a, b) => a + b, 0))+1
 }
+/*
+Toma un mensaje y una clave como entrada y devuelve el mensaje encriptado. Itera sobre la clave y aplica transformaciones al mensaje en función del valor de avance calculado previamente. Las subcadenas del mensaje se invierten en grupos de caracteres determinados por el valor de avance. 
+*/
 const encriptar=(mensaje,key)=>{
+    // Itera sobre la clave y aplica transformaciones al mensaje en función del valor de avance.
+    // Las subcadenas del mensaje se invierten.
     for (let i=2; i<=avanzarCaracteres(key.split("")); i++) {
         var expresionRegular = new RegExp(".{1," + i + "}", "g");
         mensaje =
@@ -23,7 +28,12 @@ const encriptar=(mensaje,key)=>{
 
     return mensaje
 }
+/*
+Toma un mensaje encriptado y una clave como entrada, y devuelve el mensaje desencriptado. Itera sobre la clave y aplica transformaciones inversas al mensaje en función del valor de avance calculado previamente. Las subcadenas del mensaje encriptado se invierten nuevamente en grupos de caracteres determinados por el valor de avance.
+*/
 const desencriptar=(mensaje,key)=>{
+    // Itera sobre la clave y aplica transformaciones inversas al mensaje en función del valor de avance.
+    // Las subcadenas del mensaje encriptado se invierten.
     for (let i=avanzarCaracteres(key.split("")); i>=2; i--) {
         var expresionRegular = new RegExp(".{1," + i + "}", "g");
         mensaje =
@@ -36,10 +46,11 @@ const desencriptar=(mensaje,key)=>{
 
     return mensaje
 }
-
+// Previene la acción por defecto del formulario.
 window.addEventListener("submit",e =>{
     e.preventDefault()
 })
+// Agrega event listeners para los botones de encriptar y desencriptar.
 document.getElementById("encriptar").addEventListener("click",e =>{
     e.preventDefault()
     const mensaje = document.getElementById("mensaje").value
