@@ -1,7 +1,7 @@
 {
-    "name": "beta",
-    "subName": "Es la primera version",
-    "description": "Es la primera version",
-    "priority": "1",
+    "name": "Cookie",
+    "subName": "Hay una nueva version disponible que necesita actualizar",
+    "description": "Se ve mas bonitos los componentes",
+    "priority": "3",
     "version": "0.1.0"
 }
