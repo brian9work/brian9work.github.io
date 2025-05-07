@@ -1,5 +1,6 @@
 {
-    "title": "Parece que no hay conexión en este momento (Error 404).",
+    "title": "Parece que no hay conexión en este momento",
+    "type": "(Error 404)",
     "message": "Estamos trabajando para despertarlo lo antes posible.",
     "contact": "+527491086498",
     "url": "xihmai.com"
